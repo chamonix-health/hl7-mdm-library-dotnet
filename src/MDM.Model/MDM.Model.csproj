@@ -19,7 +19,7 @@
     <ProjectReference Include="..\MDM.Common\MDM.Common.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Nehta.VendorLibrary.Common" Version="4.2.1" />
+    <PackageReference Include="Nehta.VendorLibrary.Common" Version="4.2.2" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="HL7Model\AL1.cs" />
