@@ -21,8 +21,8 @@
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MDM.Common\MDM.Common.csproj" PrivateAssets="all" />
-    <ProjectReference Include="..\MDM.Model\MDM.Model.csproj" PrivateAssets="all" />
+    <ProjectReference Include="..\MDM.Common\MDM.Common.csproj" PrivateAssets="none" />
+    <ProjectReference Include="..\MDM.Model\MDM.Model.csproj" PrivateAssets="none" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Nehta.VendorLibrary.Common" Version="4.2.2" />
@@ -40,7 +40,7 @@
   </PropertyGroup>
   <Target Name="CopyProjectReferencesToPackage">
     <ItemGroup>
-     <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')-&gt;WithMetadataValue('PrivateAssets', 'all'))" />
+     <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')-&gt;WithMetadataValue('PrivateAssets', 'none'))" />
     </ItemGroup>
   </Target>
 </Project>
